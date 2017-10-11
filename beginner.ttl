@@ -1,0 +1,43 @@
+ex:ontologyTutorialBeginner ex:hasStep ex:Step1, ex:Step2, ex:Step3, ex:Step4, ex:Step5.
+
+ex:Step1
+	ex:id "1";
+	ex:exampleText "You can create triple in the following way:";
+	ex:exampleAnswer "ex:Odie rdf:type ex:Dog.";
+    	ex:question "Please create a triple where Garfield is a cat.";
+    	ex:sparqlAskValidation "ex:Garfield rdf:type ex:Cat.";
+    	ex:hint "The order of the elements is: subject, predicate and object.".
+
+ex:Step2
+	ex:id "2";
+	ex:exampleText "You can create any triple you would like defining the the three major elements (subject, predicate and object) in the following way:";
+	ex:exampleAnswer "ex:Odie ex:loves ex:bones.";
+	ex:question "Please create the triple that expresses this sentence: Garfield loves pizza.";
+	ex:sparqlAskValidation "ex:Garfield ex:loves ex:Pizza.";
+	ex:hint "The triple always ends with a dot (.).".
+
+ex:Step3
+	ex:id "3";
+	ex:exampleText "You can say that Odie has an owner in the following way:";
+	ex:exampleAnswer "ex:Odie ex:has ex:owner.";
+	ex:question "Please create triple where Garfield has an owner.";
+	ex:sparqlAskValidation "ex:Garfield ex:has ex:Owner.";
+	ex:hint "Classes are always written starting with a capital letter.".
+
+ex:Step4
+	ex:id "4";
+	ex:exampleText "To express that Lilly is a person, you can use foaf prefix (foaf - friend of a friend relation).";
+	ex:exampleAnswer "ex:Lilly rdf:type foaf:Person.";
+	ex:question "Create a triple to express that the owner is a person. Please use foaf.";
+	ex:sparqlAskValidation "ex:Owner rdf:type foaf:Person.";
+	ex:hint "rdf:type == a".
+
+ex:Step5
+	ex:id "5";
+	ex:exampleText "You can substitute rdf:type prefix with (a) in the following way:";
+	ex:exampleAnswer "ex:Lilly a foaf:Person.";
+	ex:question "Create a triple to express that Garfield is a cat.";
+	ex:sparqlAskValidation "ex:Garfield a ex:Cat.";
+	ex:hint "a==rdf:type".
+
+	

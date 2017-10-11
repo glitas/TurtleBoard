@@ -1,0 +1,18 @@
+@prefix ex: <http://example.org/#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://www.perceive.net/schemas/relationship/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+ex:owner ex:hasName 'Jon'@en.
+ex:pizza ex:isBoughtBy ex:Jon.
+foaf:Jon rel:friendOf foaf:Vito.
+ex:Vito a foaf:Person.
+foaf:Person ex:hasName 'Vito'^^xsd:string.
+foaf:Vito ex:workAs ex:baker.
+foaf:Vito ex:bakes ex:pizza.
+foaf:Vito ex:bakes ex:pizza, ex:bread, ex:pastry.
+foaf:Vito rel:friendOf foaf:Jon; rel:enemyOf foaf:Brent.
+ex:Garfield ex:likes ex:pizza, ex:lasagna; ex:playsWith foaf:Jon, ex:Odie.

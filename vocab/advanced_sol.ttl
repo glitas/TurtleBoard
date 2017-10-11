@@ -1,0 +1,33 @@
+@prefix ex: <http://example.org/#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://www.perceive.net/schemas/relationship/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+ex:Pizza a owl:Class.
+ex:PizzaBase a owl:Class.
+ex:PizzaTopping a owl:Class.
+ex:NamedPizza a owl:Class; rdfs:subClassOf ex:Pizza.
+ex:ThinAndCrispyBase a owl:Class; rdfs:subClassOf ex:PizzaBase.
+ex:DeepPanBase a owl:Class; rdfs:subClassOf ex:PizzaBase.
+ex:CheesyTopping a owl:Class; rdfs:subClassOf ex:PizzaTopping.
+ex:MozzarellaTopping a owl:Class; rdfs:subClassOf ex:ChessyTopping.
+ex:ParmezanTopping a owl:Class; rdfs:subClassOf ex:CheesyTopping.
+ex:MeatTopping a owl:Class; rdfs:subClassOf ex:PizzaTopping.
+ex:VeggyTopping a owl:Class; rdfs:subClassOf ex:PizzaTopping.
+ex:TomatoTopping a owl:Class; rdfs:subClassOf ex:TomatoTopping.
+ex:ThinAndCrispyBase owl:disjointWith ex:DeepPanBase.
+_:x rdf:type owl:AllDisjointClasses; owl:members (ex:CheesyTopping ex:MeatTopping ex:VeggyTopping).
+ex:hasIngridient a owl:ObjectProperty; rdfs:domain ex:Food; rdfs:range ex:Food.
+ex:hasTopping a owl:ObjectProperty; rdfs:subPropertyOf ex:hasIngridient; rdfs:domain ex:Pizza; rdfs:range ex:PizzaTopping.
+ex:hasBase a owl:ObjectProperty; rdfs:subPropertyOf ex:hasIngridient; rdfs:domain ex:Pizza; rdfs:range ex:PizzaBase.
+ex:isIngredientOf a owl:ObjectProperty; rdfs:inversOf ex:hasIngridient.
+ex:isBaseOf a owl:ObjectProperty; rdfs:inversOf ex:hasBase.
+ex:isToppingOf a owl:ObjectProperty; rdfs:inversOf ex:hasTopping.
+ex:hasIngridient a owl:TransitivProperty.
+ex:hasBase a owl:FunctionalProperty.
+ex:hasBase owl:someValueFrom ex:PizzaBase.
+ex:MargaritaPizza a owl:Class; rdfs:subClassOf ex:NamedPizza; owl:onProperty ex:hasTopping.
+ex:hasTopping owl:someValueFrom ex:MozzarelaTopping; owl:someValueFrom ex:TomatoTopping.

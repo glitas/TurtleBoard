@@ -1,0 +1,10 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ex: <http://www.example.com#> .
+@prefix foaf: <http://www.xmlns.com/foaf/spec/#>.
+
+ex:robber rdf:type foaf:person.
+ex:robber foaf:name "Avril Dalton"@en.
+ex:robber ex:robbed ex:CommerceBank.
+ex:CommerceBank rdf:type ex:bank.
+ex:CommerceBank ex:location ex:city.
+ex:city ex:name "Bonn"@de.
