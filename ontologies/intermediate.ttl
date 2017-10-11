@@ -1,0 +1,83 @@
+@prefix ex: <http://example.org/#>.
+
+ex:ontologyTutorialIntermediate ex:hasStep ex:Step1, ex:Step2, ex:Step3, ex:Step4, ex:Step5, ex:Step6, ex:Step7, ex:Step8, ex:Step9, ex:Step10. 
+
+ex:Step1 
+	ex:id "1";
+	ex:exampleText "To say that the dog is called Oddie and Odie is an English name you have to write a triple in the following way:";
+	ex:exampleAnswer "ex:dog ex:isCalled 'Odie'@en.";
+	ex:question "Please write a triple where the owner has a name Jon and this name is an English name.";
+	ex:sparqlAskValidation "ex:owner ex:hasName 'Jon'@en.";
+	ex:hint "When the predicate consists of two words, the we use the lowerCamelCaseNotation.".
+
+ex:Step2
+	ex:id "2";
+	ex:exampleText "To say that Odie is bought by a person, you can create the triple in this way:";
+	ex:exampleAnswer "ex:Odie ex:isBoughtBy ex:Person.";
+	ex:question "Please create a triple expressing that pizza is bought by Jon.";
+	ex:sparqlAskValidation "ex:pizza ex:isBoughtBy ex:Jon.";
+	ex:hint "When the subject and the predicate are classes, then they are usually written starting with a capital letter".
+
+ex:Step3
+    ex:id "3";
+   	ex:exampleText "You may show a relation between 2 persons in the following way:";
+    ex:exampleAnswer "foaf:Lilly rel:friendOf foaf:Mila.";
+    ex:question "Write a triple to say that Jon is friend of Vito.";
+    ex:sparqlAskValidation "foaf:Jon rel:friendOf foaf:Vito.";
+    ex:hint "rel:friendOf <> foaf.  FOAF and REL are different namespaces.".
+
+ex:Step4
+    ex:id "4";
+    ex:exampleText "rdf:type may be replaced with (a) in the following way:";
+    ex:exampleAnswer "ex:Odie a ex:dog.";
+    ex:question "Please write the triple: Vito is a person. Be careful, we had an example prefix used for defining a person!";
+    ex:sparqlAskValidation "ex:Vito a foaf:Person.";
+    ex:hint "A common convention in Turtle indicates that the class names are written with an initial uppercase letter.".
+
+ex:Step5
+    ex:id "5";
+    ex:exampleText "You may use datatype to define an object in the following way:";
+    ex:exampleAnswer "foaf:Person ex:hasName 'Albert'^^xsd:string.";
+    ex:question "Using the example given above, write a triple where person has a name Vito and the name is of datatype string.";
+    ex:sparqlAskValidation "foaf:Person ex:hasName 'Vito'^^xsd:string.";
+    ex:hint "xsd is XML Schema Definition that we use as a namespace/prefix in order to define certain datatypes.".
+
+ex:Step6
+    ex:id "6";
+    ex:exampleText "You can indicate that a person has a profession in the following way:";
+    ex:exampleAnswer "foaf:Jon ex:workAs ex:reporter.";
+    ex:question "Please write a triple which expresses that Vito's profession is baker.";
+    ex:sparqlAskValidation "foaf:Vito ex:workAs ex:baker.";
+    ex:hint "The predicate workAs should be written using the lowerCamelCaseNotation".
+
+ex:Step7
+    ex:id "7";
+    ex:exampleText "You can describe someone's job in the following way:";
+    ex:exampleAnswer "foaf:Jon ex:writes ex:reports.";
+    ex:question "Please write the triple in order to express that Vito bakes pizza.";
+    ex:sparqlAskValidation "foaf:Vito ex:bakes ex:pizza.";
+    ex:hint "We use the foaf prefix for the subject since Vito is an instance of the class Person.".
+
+ex:Step8
+   	ex:id "8";
+    ex:exampleText "One subject and predicate can have multiple objects. You can define multiple objects in the following way:";
+    ex:exampleAnswer "ex:Garfield ex:hates ex:dog, ex:monday, ex:hunger.";
+    ex:question "Please write a triple indicating that Vito bakes pizza, bread and pastry.";
+    ex:sparqlAskValidation "foaf:Vito ex:bakes ex:pizza, ex:bread, ex:pastry.";
+    ex:hint "(,) is the delimiter used for distinguishing different objects of the same subject and predicate.".
+
+ex:Step9
+    ex:id "9";
+    ex:exampleText "You can define a triple with one subject referring to different predicates and objects in the following way:";
+    ex:exampleAnswer "ex:Garfield ex:loves ex:pizza; rel:friendOf ex:Odie.";
+    ex:question "Please write a triple indicating that Vito is a friend of Jon and that Vito is an enemy of Brent. Be careful when indicating the relation type, as well as what kind of prefix you may use. Do not forget that Vito, Jon and Brent are people.";
+    ex:sparqlAskValidation "foaf:Vito rel:friendOf foaf:Jon; rel:enemyOf foaf:Brent.";
+    ex:hint "(;) is the delimiter used for distinguishing two tripples that have the same subject.".
+
+ex:Step10
+    ex:id "10";
+    ex:exampleText "One subject can have different predicates and different objects. You can define these kind of triples in the following way:";
+    ex:exampleAnswer "foaf:Jon ex:hasPet ex:Garfield, ex:Odie; ex:writes ex:reports, ex:essays.";
+    ex:question "Please write a triple to express that Garfield likes pizza and lasagna, and that Garfield plays with Jon and Odie. Be careful: Jon is a person.";
+    ex:sparqlAskValidation "ex:Garfield ex:likes ex:pizza, ex:lasagna; ex:playsWith foaf:Jon, ex:Odie.";
+    ex:hint "(,) - delimiter for different objects. (;) - delimiter for different predicates and objects.".

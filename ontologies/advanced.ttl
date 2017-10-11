@@ -1,0 +1,204 @@
+@prefix ex: <http://example.org/#> .
+
+ex:ontologyTutorialAdvanced
+    ex:hasStep ex:Step1, ex:Step2, ex:Step3, ex:Step4, ex:Step5, ex:Step6, ex:Step7, ex:Step8, ex:Step9, ex:Step10, ex:Step11, ex:Step12, ex:Step13, ex:Step14, ex:Step15, ex:Step16, ex:Step17, ex:Step18, ex:Step19, ex:Step20, ex:Step21, ex:Step22, ex:Step23, ex:Step24, ex:Step25.
+
+ex:Step1
+    ex:id "1";
+    ex:exampleText "You can create a drink class in the following way:";
+    ex:exampleAnswer "ex:Drink a owl:Class.";
+    ex:question "Please create a Pizza Class.";
+    ex:sparqlAskValidation "ex:Pizza a owl:Class.";
+    ex:hint "Class names start with capital letter.".
+
+ex:Step2
+    ex:id "2";
+    ex:exampleText "You can create a bottle class in the following way:";
+    ex:exampleAnswer "ex:Bottle a owl:Class.";
+    ex:question "Please create a PizzaBase Class.";
+    ex:sparqlAskValidation "ex:PizzaBase a owl:Class." ;
+    ex:hint "a==rdf:type".
+
+ex:Step3
+    ex:id "3";
+    ex:exampleText "You can create a water class in the following way:";
+    ex:exampleAnswer "ex:Water a owl:Class.";
+    ex:question "Please create a PizzaTopping Class.";
+    ex:sparqlAskValidation "ex:PizzaTopping a owl:Class.";
+    ex:hint "Class names start with capital letter.".
+
+ex:Step4
+    ex:id "4";
+    ex:exampleText "You can create a bottle subclass in the following way:";
+    ex:exampleAnswer "ex:GlassBottle a owl:Class; rdfs:subClassOf ex:Bottle.";
+    ex:question "Please create a class ThinAndCrispyBase subclass of PizzaBase.";
+    ex:sparqlAskValidation "ex:ThinAndCrispyBase a owl:Class; rdfs:subClassOf ex:PizzaBase.";
+    ex:hint "For predicates that consist of more than one word, we use lowerCamelCaseNotation.".
+
+ex:Step5
+    ex:id "5";
+    ex:exampleText "You can create a subclass in the following way:";
+    ex:exampleAnswer "ex:Fanta a owl:Class; rdfs:subClassOf ex:Drink.";
+    ex:question "Please create a class NamedPizza, subclass of Pizza.";
+    ex:sparqlAskValidation "ex:NamedPizza a owl:Class; rdfs:subClassOf ex:Pizza.";
+    ex:hint "(;)-delimiter for two triples that have the same subject.".
+
+ex:Step6
+    ex:id "6";
+    ex:exampleText "You can create a bottle subclass in the following way:";
+    ex:exampleAnswer "ex:PlasticBottle a owl:Class; rdfs:subClassOf ex:Bottle.";
+    ex:question "Please create a class DeepPanBase subclass of PizzaBase.";
+    ex:sparqlAskValidation "ex:DeepPanBase a owl:Class; rdfs:subClassOf ex:PizzaBase.";
+    ex:hint "For predicates that consist of more than one word, we use lowerCamelCaseNotation.".
+
+ex:Step7
+    ex:id "7";
+    ex:exampleText "You can create a MineralWater subclass of Water class in the following way:";
+    ex:exampleAnswer "ex:MineralWater a owl:Class; rdfs:subClassOf ex:Water.";
+    ex:question "Please create a class CheesyTopping that is a subclass of PizzaTopping.";
+    ex:sparqlAskValidation "ex:CheesyTopping a owl:Class; rdfs:subClassOf ex:PizzaTopping.";
+    ex:hint "rdf and rdfs are two different namespaces.".
+
+ex:Step8
+    ex:id "8";
+    ex:exampleText "You can create a MineralWaterWithGas subclass of MineralWater class in the following way:";
+    ex:exampleAnswer "ex:MineralWaterWithGas a owl:Class; rdfs:subClassOf ex:MineralWater.";
+    ex:question "Please create a class MozzarellaTopping that is a subclass of CheesyTopping.";
+    ex:sparqlAskValidation "ex:MozzarellaTopping a owl:Class; rdfs:subClassOf ex:ChessyTopping.";
+    ex:hint "a==rdf:type".
+
+ex:Step9
+    ex:id "9";
+    ex:exampleText "You can create a MineralWaterWithoutGas subclass of MineralWater class in the following way:";
+    ex:exampleAnswer "ex:MineralWaterWithoutGas a owl:Class; rdfs:subClassOf ex:MineralWater.";
+    ex:question "Please create a class ParmezanTopping that is a subclass of CheesyTopping.";
+    ex:sparqlAskValidation "ex:ParmezanTopping a owl:Class; rdfs:subClassOf ex:CheesyTopping.";
+    ex:hint "In the class names that consit of two words, each is capitalized.".
+
+ex:Step10
+    ex:id "10";
+    ex:exampleText "You can create a SaltyWater subclass of Water class in the following way:";
+    ex:exampleAnswer "ex:SaltyWater a owl:Class; rdfs:subClassOf ex:Water.";
+    ex:question "Please create a class MeatTopping that is a subclass of PizzaTopping.";
+    ex:sparqlAskValidation "ex:MeatTopping a owl:Class; rdfs:subClassOf ex:PizzaTopping.";
+    ex:hint "For predicates that consist of more than one word, we use lowerCamelCaseNotation.".
+
+ex:Step11
+    ex:id "11";
+    ex:exampleText "You can create a SweetWater subclass of Water class in the following way:";
+    ex:exampleAnswer "ex:SweetWater a owl:Class; rdfs:subClassOf ex:Water.";
+    ex:question "Please create a class VeggyTopping that is a subclass of PizzaTopping.";
+    ex:sparqlAskValidation "ex:VeggyTopping a owl:Class; rdfs:subClassOf ex:PizzaTopping.";
+    ex:hint "(;)-delimiter for two triples that have the same subject.".
+
+ex:Step12
+    ex:id "12";
+    ex:exampleText "You can create a LakeWater subclass of SweetWater class in the following way:";
+    ex:exampleAnswer "ex:LakeWater a owl:Class; rdfs:subClassOf ex:SweetWater.";
+    ex:question "Please create a class TomatoTopping that is a subclass of VeggyTopping.";
+    ex:sparqlAskValidation "ex:TomatoTopping a owl:Class; rdfs:subClassOf ex:TomatoTopping.";
+    ex:hint "For predicates that consist of more than one word, we use lowerCamelCaseNotation.".
+
+ex:Step13
+    ex:id "13";
+    ex:exampleText "You can create disjoint classes in the following way:";
+    ex:exampleAnswer "ex:PlasticBottle owl:disjointWith ex:GlassBottle.";
+    ex:question "Please create a triple to express that ThinAndCrispyBase is disjoint with DeepPanBase.";
+    ex:sparqlAskValidation "ex:ThinAndCrispyBase owl:disjointWith ex:DeepPanBase.";
+    ex:hint "In the class names that consit of two words, each is capitalized.".
+
+ex:Step14
+    ex:id "14";
+    ex:exampleText "You can create disjoint multiple classes in the following way:";
+    ex:exampleAnswer "_:x rdf:type owl:AllDisjointClasses; owl:members (ex:MineralWater ex:SaltyWater ex:SweetWater).";
+    ex:question "Please create a triple to say that CheesyTopping, MeatTopping and VeggyTopping are disjoint classes.";
+    ex:sparqlAskValidation "_:x rdf:type owl:AllDisjointClasses; owl:members (ex:CheesyTopping ex:MeatTopping ex:VeggyTopping).";
+    ex:hint "_:x is a blank node.".
+
+ex:Step15
+    ex:id "15";
+    ex:exampleText "To create a property, you may use 'has' or 'is'.You can create an Object Property in the following way:";
+    ex:exampleAnswer "ex:hasMembers a owl:ObjectProperty; rdfs:domain ex:GangsterGang; rdfs:range ex:Person.";
+    ex:question "Please create an Object Property hasIngridient with domain and range 'Food'.";
+    ex:sparqlAskValidation "ex:hasIngridient a owl:ObjectProperty; rdfs:domain ex:Food; rdfs:range ex:Food.";
+    ex:hint "owl:ObjectProperty is a class of properties; therefore it does not start with small letter.".
+
+ex:Step16
+    ex:id "16";
+    ex:exampleText "You can create a subProperty of hasMembers with domain and range, as mentioned in the example above, in the following way:";
+    ex:exampleAnswer "ex:hasSmartMember a owl:ObjectProperty; rdfs:subPropertyOf ex:hasMembers; rdfs:domain ex:GangsterGang; rdfs:range ex:Person.";
+    ex:question "Please create an ObjectProperty hasTopping that is a subProperty of hasIngridient, and has domain Pizza and range PizzaTopping.";
+    ex:sparqlAskValidation "ex:hasTopping a owl:ObjectProperty; rdfs:subPropertyOf ex:hasIngridient; rdfs:domain ex:Pizza; rdfs:range ex:PizzaTopping.";
+    ex:hint "Domain and range are not the same thing.".
+
+ex:Step17
+    ex:id "17";
+    ex:exampleText "You can create one more subProperty of hasMembers with domain and range, as mentioned in the example in the previous step, in the following way:";
+    ex:exampleAnswer "ex:hasStupidMember a owl:ObjectProperty; rdfs:subPropertyOf ex:hasMembers; rdfs:domain ex:GangsterGang; rdfs:range ex:Person.";
+    ex:question "Please create an ObjectProperty hasBase that is subclass of hasIngridient, and has domain Pizza and range PizzaBase.";
+    ex:sparqlAskValidation "ex:hasBase a owl:ObjectProperty; rdfs:subPropertyOf ex:hasIngridient; rdfs:domain ex:Pizza; rdfs:range ex:PizzaBase.";
+    ex:hint "We use lowerCamelCaseNotation for predicates and UpperCamelCaseNotation for classes.".
+
+ex:Step18
+    ex:id "18";
+    ex:exampleText "You can create an InversProperty in the following way:";
+    ex:exampleAnswer "ex:isMemberOF a owl:ObjectProperty; rdfs:inversOf ex:hasMembers.";
+    ex:question "Please create an InversProperty of the hasIngridient property.";
+    ex:sparqlAskValidation "ex:isIngredientOf a owl:ObjectProperty; rdfs:inversOf ex:hasIngridient.";
+    ex:hint "owl:ObjectProperty is a class of properties; therefore it does not start with small letter.".
+
+ex:Step19
+    ex:id "19";
+    ex:exampleText "You can create an InversProperty of hasSmartMember property in the following way:";
+    ex:exampleAnswer "ex:isSmartMemberOf a owl:ObjectProperty; rdfs:inversOf ex:hasSmartMember.";
+    ex:question "Please create an InversProperty of the hasBase.";
+    ex:sparqlAskValidation "ex:isBaseOf a owl:ObjectProperty; rdfs:inversOf ex:hasBase.";
+    ex:hint "owl:ObjectProperty is a class of properties; therefore it does not start with small letter.".
+
+ex:Step20
+    ex:id "20";
+    ex:exampleText "You can create an InversProperty of hasStupidMember in the following way:";
+    ex:exampleAnswer "ex:isStupidMemberOf a owl:ObjectProperty; rdfs:inversOf ex:hasStupidMember.";
+    ex:question "Please create an InversProperty of the hasTopping.";
+    ex:sparqlAskValidation "ex:isToppingOf a owl:ObjectProperty; rdfs:inversOf ex:hasTopping.";
+    ex:hint "rdfs:inversOf is the actual representation of the InversProperty.".
+
+ex:Step21
+    ex:id "21";
+    ex:exampleText "You can create a TransitivProperty in the following way:";
+    ex:exampleAnswer "ex:hasMembers a owl:TransitivProperty.";
+    ex:question "Please write a triple to mention that hasIngridient is transitiv property.";
+    ex:sparqlAskValidation "ex:hasIngridient a owl:TransitivProperty.";
+    ex:hint "owl:TransitivProperty is a class of properties; therefore it does not start with small letter.".
+
+ex:Step22
+    ex:id "22";
+    ex:exampleText "You can create a FunctionalProperty in the following way:";
+    ex:exampleAnswer "ex:hasStupidMember a owl:FunctionalProperty.";
+    ex:question "Please create a triple where the hasBase is functional property.";
+    ex:sparqlAskValidation "ex:hasBase a owl:FunctionalProperty.";
+    ex:hint "owl:FunctionalProperty is a class of properties; therefore it does not start with small letter.".
+
+ex:Step23
+    ex:id "23";
+    ex:exampleText "You may say that Drink class contain some value from Water class in the following way:";
+    ex:exampleAnswer "ex:Drink owl:someValueFrom ex:Water.";
+    ex:question "Please create a triple where the Pizza class contains some values from PizzaBase.";
+    ex:sparqlAskValidation "ex:hasBase owl:someValueFrom ex:PizzaBase.";
+    ex:hint "For predicates that consist of more than one word, we use lowerCamelCaseNotation.".
+
+ex:Step24
+    ex:id "24";
+    ex:exampleText "You can create a subclass and define the property for this class in the following way:";
+    ex:exampleAnswer "ex:GangsterGang a owl:Class; rdfs:subClassOf ex:GangsterGroup; owl:onProperty ex:hasMembers.";
+    ex:question "Please create a class MargaritaPizza subclass of NamedPizza with the hasTopping property.";
+    ex:sparqlAskValidation "ex:MargaritaPizza a owl:Class; rdfs:subClassOf ex:NamedPizza; owl:onProperty ex:hasTopping.";
+    ex:hint "For classes that consist of more than one word, we use the UpperCamelCaseNotation.".
+
+ex:Step25
+    ex:id "25";
+    ex:exampleText "You can create some restrictions for the class we created previously, in the following way:";
+    ex:exampleAnswer "ex:hasMembers owl:someValuesFrom ex:StupidMember; owl:someValuesFrom ex:SmartMember.";
+    ex:question "Please create a triple where the class MargaritaPizza we created above hasTopping some values from mozzarela and tomato topping.";
+    ex:sparqlAskValidation "ex:hasTopping owl:someValueFrom ex:MozzarelaTopping; owl:someValueFrom ex:TomatoTopping.";
+    ex:hint "owl:someValueFrom is a predicate.".
